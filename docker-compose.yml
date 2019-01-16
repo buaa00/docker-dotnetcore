@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  webapi:
+    build:
+      context: ./
+      dockerfile: ./WebApi/Dockerfile
+    ports:
+      - "8080:5000"
+    networks:
+      - testnet
+  
+
+networks:
+  testnet:
